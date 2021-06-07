@@ -1,0 +1,17 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello CategoryController!{% endblock %}
+
+{% block body %}
+<h1>
+    Toute les categories
+</h1>
+
+<div>
+    {% for category in categories %}
+        <li>
+            <a href="/categories/{{ category.name }}">{{ category.name }}</a>
+        </li>
+    {% endfor %}
+</div>
+{% endblock %}
